@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Shop 메인</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel=stylesheet href="css/shopFrame.css" type="text/css">
+<style type="text/css" media="screen"> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap') ;
+</style>
+<script type="text/javascript" src="resources/js/shop_mainAction.js"></script>
+<!-- <script>는 추후 핸들러 객체로 수정 필요!!!!!!!!!!!!!!! -->
+
+</head>
+<body>
+   <!-- 메인 헤더  시작-->
+   <div th:insert="shop_main_header.html" id="toolbar"> </div>
+   <!-- 메인 헤더  종료-->
+
+   <!-- 왼쪽 사이드바 시작-->
+   <div th:insert="shop_main_left.html" id="navigation">  </div>
+   <!-- 왼쪽 사이드바  종료-->
+
+	<!-- 검색창 시작 -->
+	<div class="search" action="" method="get">
+ 		<div id="logo2" href="shop_main_form.html"> <img src="css/image/goggle.png" ></div>
+		<!-- 검색바(검색내용 적는 곳) -->       
+	    <input type="text" class="searchTerm" name="searchKeyword" id="searchKeyword">
+    	
+		<!-- 검색버튼 -->       
+        <button type="submit" class="searchButton">
+            <img src="css/image/search.png" alt="Search" style="width: 20px; height: 20px; padding-top:5px">
+        </button>
+		 
+		 <button type="submit" class="mapButton">
+            <img src="css/image/map.png" alt="Search">
+        </button>
+	
+	</div>
+	<!-- 검색창 종료 -->
+
+   <!-- 광고 시작 -->
+   <div class="header_event">
+      <button class="header_event_button_left" onClick="plusSlides(-1)">
+         <img src="css/image/pageNumber/Triangle_Left.png" height="20px"
+            width="20px">
+      </button>
+      <div class="header_event_img" style="display: block;">
+         <img src="https://i.pinimg.com/564x/67/8c/fb/678cfbcea8dd03d0df9cd9050127b516.jpg">
+      </div>
+      
+      <div class="header_event_img" style="display: none;">
+         <img src="https://i.pinimg.com/564x/ed/63/a9/ed63a959c8416e5e2364b3e216facce8.jpg">
+      </div>
+      
+      <div class="header_event_img" style="display: none;">
+         <img  src="https://i.pinimg.com/564x/bd/ff/f2/bdfff203657f8fd7555b11d14fe32a6b.jpg">
+      </div>
+      
+      <button class="header_event_button_right" onClick="plusSlides(1)">
+         <img src="css/image/pageNumber/Triangle_Right.png" height="20px" width="20px">
+      </button>
+   </div>
+   <!-- 광고 종료 -->
+
+   
+
+   <!-- 상품목록 시작 -->
+   <ul class="product-list" style="text-align: center;">
+  
+      <li class="product" style="text-align: center; display: inline-table; width: 15%; padding: 5px; ">
+  		 <a href="product_form_action.jsp?p_no=">
+        <img src="images/" class="product-image" width="150" height="150"/> 
+         </a>
+        <h2 class="product-name" style="font-size: 14px;"></h2>
+        <p class="product-price"> </p> 
+    </li> 
+   </ul>
+
+ 
+
+   <div class="clearfix"></div>
+   <!-- 상품목록 종료 -->
+
+   
+
+</body>
+</html>
